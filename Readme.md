@@ -1,0 +1,1 @@
+This is a simple python Scrapper for the Jumia flashsale
