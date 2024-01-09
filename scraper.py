@@ -21,4 +21,14 @@ for items in soup.find_all("div",class_='info'):
     
     print()
 
+for it in range(len(items_list)):
+       
+      conn = sqlite3.connect("sales.sqlite")
+      
+      curr = conn.cursor()
+      
+      curr.execute("INSERT INTO Flash(item,price) VALUES(?,?)",(items_list[it],newer[it]))
+      
+      conn.commit()
+
 print(page_no)
